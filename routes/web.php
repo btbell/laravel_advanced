@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::namespace('Web')->group(function() {
+	Route::resource('teams', 'TeamController');
+});
